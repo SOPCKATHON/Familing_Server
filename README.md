@@ -149,7 +149,7 @@
 }
 ```
 
-## Base URL
+## ✨ Base URL
 
 ```
 https://asia-northeast3-familing-33c14.cloudfunctions.net/api
@@ -157,11 +157,11 @@ https://asia-northeast3-familing-33c14.cloudfunctions.net/api
 
 ## ERD Diagram
 
-![familing_end](https://user-images.githubusercontent.com/49135797/142742358-08156167-0ab9-45f9-a227-da657f62fcab.png)
+![familing_erd](https://user-images.githubusercontent.com/49135797/142743442-7b1d82fe-275f-4767-9802-ae9c4f3883c6.png)
 
 ## Table
 
-<img src="https://user-images.githubusercontent.com/49135797/142743061-d0e6b2b5-7769-4059-830f-66507ae98300.png" width = 380/>
+<img src="https://user-images.githubusercontent.com/49135797/142743061-d0e6b2b5-7769-4059-830f-66507ae98300.png" width = 360/>
 
 ## API 명세서
 
