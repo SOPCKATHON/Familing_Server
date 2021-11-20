@@ -12,12 +12,13 @@ const options = {
     basePath: "/",
     schemes: ["http", "https"],
     definitions: {
-      Post: {
+      memory: {
         type: "object",
         properties: {
           postId: { type: "number" },
           category: { type: "number" },
           date: { type: "timestamp" },
+          month: { type: "number" },
           content: { type: "string" }
         }
       }
