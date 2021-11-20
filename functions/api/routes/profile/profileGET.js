@@ -23,20 +23,30 @@ module.exports = async (req, res) => {
 
     const thisMonthMemory = await memoryDB.getMonthMemory(client, thisMonth);
     const lastMonthMemory = await memoryDB.getMonthMemory(client, lastMonth);
-    const food = thisMonthMemory.filter((obj) => obj.category === 0).length;
-    const picnic = thisMonthMemory.filter((obj) => obj.category === 1).length;
-    const travel = thisMonthMemory.filter((obj) => obj.category === 2).length;
-    const exercise = thisMonthMemory.filter((obj) => obj.category === 3).length;
-    const others = thisMonthMemory.filter((obj) => obj.category === 4).length;
+    const food = thisMonthMemory.filter(
+      (obj) => obj.category === "stamp0"
+    ).length;
+    const picnic = thisMonthMemory.filter(
+      (obj) => obj.category === "stamp1"
+    ).length;
+    const travel = thisMonthMemory.filter(
+      (obj) => obj.category === "stamp2"
+    ).length;
+    const exercise = thisMonthMemory.filter(
+      (obj) => obj.category === "stamp3"
+    ).length;
+    const others = thisMonthMemory.filter(
+      (obj) => obj.category === "stamp4"
+    ).length;
 
     const profileInfo = {
       thisMonthLength: thisMonthMemory.length,
       lastMonthLength: lastMonthMemory.length,
-      0: food,
-      1: picnic,
-      2: travel,
-      3: exercise,
-      4: others
+      stamp0: food,
+      stamp1: picnic,
+      stamp2: travel,
+      stamp3: exercise,
+      stamp4: others
     };
 
     res
