@@ -3,8 +3,9 @@ const router = express.Router();
 
 /**
  * @swagger
- * /post/regist:
+ * /profile:
+ *  get:
  */
-router.post("/regist", require("./postingPOST"));
+router.get("/", require("./profileGET"));
 
 module.exports = router;

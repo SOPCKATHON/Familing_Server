@@ -23,7 +23,7 @@ const options = {
       }
     }
   },
-  apis: ["./api/routes/post/*.js", "./swagger/*"]
+  apis: ["./api/routes/memory/*.js", "./swagger/*", "./api/routes/profile/*.js"]
 };
 
 const specs = swaggereJsdoc(options);
