@@ -13,7 +13,7 @@ const router = express.Router();
  * /memory/list/:month:
  *  get:
  *    summary: 해당 월 전체 메모리 조회 API
- *    tags: [Memorys]
+ *    tags: [Memory]
  *    parameters:
  *      - in: path
  *        type: int
@@ -29,7 +29,7 @@ router.get("/list/:month", require("./memoryListGET"));
  * /memory/:memoryId:
  *  get:
  *    summary: 해당 메모리 정보 조회 API
- *    tags: [Memorys]
+ *    tags: [Memory]
  *    parameters:
  *      - in: path
  *        type: int
