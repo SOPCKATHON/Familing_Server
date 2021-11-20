@@ -1,3 +1,4 @@
+const dayjs = require("dayjs");
 const functions = require("firebase-functions");
 const { success, fail } = require("../../../lib/util");
 const statusCode = require("../../../constants/statusCode");
@@ -15,7 +16,8 @@ module.exports = async (req, res) => {
   let client;
   try {
     client = await db.connect(req);
-    const memory = await memoryDB.getMemory(client, memoryId);
+    let memory = await memoryDB.getMemory(client, memoryId);
+    memory = { ...memory, date: dayjs(memory.date).format("YYYY.MM.DD") };
     if (!memory)
       return res
         .status(statusCode.NOT_FOUND)

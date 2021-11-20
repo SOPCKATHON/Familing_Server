@@ -1,3 +1,4 @@
+const dayjs = require("dayjs");
 const functions = require("firebase-functions");
 const util = require("../../../lib/util");
 const statusCode = require("../../../constants/statusCode");
@@ -18,7 +19,13 @@ module.exports = async (req, res) => {
   try {
     client = await db.connect(req);
 
-    const memorys = await memoryDB.getMonthMemory(client, month);
+    const memories = await memoryDB.getMonthMemory(client, month);
+    let newMemories = [];
+
+    for (let m of memories) {
+      m = { ...m, date: dayjs(m.date).format("YYYY.MM.DD") };
+      newMemories.push(m);
+    }
 
     res
       .status(statusCode.OK)
@@ -26,7 +33,7 @@ module.exports = async (req, res) => {
         util.success(
           statusCode.OK,
           responseMessage.MEMORY_LIST_GET_SUCCESS,
-          memorys
+          newMemories
         )
       );
   } catch (error) {
