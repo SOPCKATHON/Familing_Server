@@ -102,3 +102,6 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Firebase Key
+wesopt29-e0987-firebase-adminsdk-f54d4-0ea3f1c96e.json
