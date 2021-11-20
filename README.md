@@ -21,14 +21,14 @@
 
 ## 개발 담당
 
-이승헌
+### [이승헌](https://github.com/lsh328328)
 
 ```
 - 월별 memory list GET
 - 마이페이지의 memory 개수 GET
 ```
 
-조윤서
+### [조윤서](https://github.com/healing99)
 
 ```
 - 특정 memory GET
@@ -106,3 +106,63 @@
     ```
 - 작은 기능별로 `commit message rules`에 따라 커밋을 진행합니다
 - 다 쓴 브랜치는 삭제합니다
+
+## 🏁 Dependencies Module
+
+```
+{
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "14"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "dayjs": "^1.10.7",
+    "dotenv": "^10.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "express": "^4.17.1",
+    "firebase-admin": "^9.8.0",
+    "firebase-functions": "^3.14.1",
+    "helmet": "^4.6.0",
+    "hpp": "^0.2.3",
+    "lodash": "^4.17.21",
+    "pg": "^8.7.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.6.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0",
+    "swagger-jsdoc": "^6.1.0",
+    "swagger-ui-express": "^4.1.6"
+  },
+  "private": true
+}
+```
+
+## Base URL
+
+```
+https://asia-northeast3-familing-33c14.cloudfunctions.net/api
+```
+
+## ERD Diagram
+
+![familing_end](https://user-images.githubusercontent.com/49135797/142742358-08156167-0ab9-45f9-a227-da657f62fcab.png)
+
+## Table
+
+<img src="https://user-images.githubusercontent.com/49135797/142743061-d0e6b2b5-7769-4059-830f-66507ae98300.png" width = 380/>
+
+## API 명세서
+
+### 👉 [API 명세서](https://creative-mollusk-bff.notion.site/API-22900d3126d747ea9a77a2888bcf8e84)
