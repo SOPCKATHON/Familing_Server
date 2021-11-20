@@ -19,4 +19,15 @@ const getMonthMemory = async (client, month) => {
   return convertSnakeToCamel.keysToCamel(rows);
 };
 
-module.exports = { getAllMemory, getMonthMemory };
+const getMemory = async (client, memoryId) => {
+  const { rows } = await client.query(
+    `
+    SELECT * FROM "memory" m
+    WHERE memory_id = $1
+    `,
+    [memoryId]
+  );
+  return convertSnakeToCamel.keysToCamel(rows[0]);
+};
+
+module.exports = { getAllMemory, getMemory, getMonthMemory};
