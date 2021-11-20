@@ -32,11 +32,11 @@ module.exports = async (req, res) => {
     const profileInfo = {
       thisMonthLength: thisMonthMemory.length,
       lastMonthLength: lastMonthMemory.length,
-      food,
-      picnic,
-      travel,
-      exercise,
-      others
+      0: food,
+      1: picnic,
+      2: travel,
+      3: exercise,
+      4: others
     };
 
     res
